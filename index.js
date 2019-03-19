@@ -3,7 +3,7 @@ const bot = new Discord.Client();
 const prefix = ">"; 
 
 bot.on("ready", () => {
- console.log('Bot je ready!);
+ console.log('Bot je ready!');
 })
 bot.on("message", async message => {
       if(message.author.bot) return;
