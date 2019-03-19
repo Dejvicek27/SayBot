@@ -15,18 +15,21 @@ bot.on("message", async message => {
       if(cmd === `${prefix}help`){
          var embed = new Discord.RichEmbed()
          .setAuthor("Help")
-         .setDescription("Mam rad hranolky")
-         .setColor("GREEN")
+         .setDescription("Můj prefix je >")
+         .setColor("RED")
          .setFooter("by Dejvicek27™")
          .setTimestamp()
-         .addField("FIELD NAME", "FIELD VALUE")
-         .addField("FIELD NAME", "FIELD VALUE")
+         .addField("PŘÍKAZ", "Say - Řeknu za tebe co chceš!")
          .setImage("https://cdn.discordapp.com/attachments/557326857377415208/557361021157900289/JPEG_20190318_221748.jpg")
          .setThumbnail("https://cdn.discordapp.com/attachments/557326857377415208/557361021157900289/JPEG_20190318_221748.jpg");
           message.channel.send(embed)
           return;
       }
+      if(cmd === `${prefix}say`){
+         let msg = args.join(" ");
+         message.channel.send(msg)
+      }
  
 
-})  
+})
 bot.login(process.env.token)
