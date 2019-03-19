@@ -23,6 +23,7 @@ bot.on("message", async message => {
          .addField("INVITNI MĚ", "[INVITE](https://discordapp.com/api/oauth2/authorize?client_id=557364813886521398&permissions=8&scope=bot)")
          .setImage("https://cdn.discordapp.com/attachments/557326857377415208/557361021157900289/JPEG_20190318_221748.jpg")
          .setThumbnail("https://cdn.discordapp.com/attachments/557326857377415208/557629148017983488/IMG_20190319_185901_859.jpg");
+          message.channel.send(embed)
           return;
       }
       if(cmd === `${prefix}say`){
