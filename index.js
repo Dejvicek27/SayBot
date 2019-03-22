@@ -5,6 +5,8 @@ const prefix = ">";
 bot.on("ready", () => {
  console.log('Bot je ready!');
 });
+ bot.user.setActivity("Začni s >help", {type: "PLAYING"});
+
 bot.on("message", async message => {
       if(message.author.bot) return;
       if(!message.content.startsWith(prefix)) return;
