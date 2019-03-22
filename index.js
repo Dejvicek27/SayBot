@@ -7,6 +7,9 @@ bot.on("ready", () => {
 });
  bot.user.setActivity("Začni s >help", {type: "PLAYING"});
 
+ //bot.user.setGame("on SourceCade!");
+});
+
 bot.on("message", async message => {
       if(message.author.bot) return;
       if(!message.content.startsWith(prefix)) return;
